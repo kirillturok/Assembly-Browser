@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-Browser", "Assembly-Browser\Assembly-Browser.csproj", "{D7622B51-67ED-468F-AAEE-ED9BC5734CDE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssemblyInfo", "AssemblyInfo\AssemblyInfo.csproj", "{C2493B26-EAEB-4851-AEA0-0E094EC5A70A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D7622B51-67ED-468F-AAEE-ED9BC5734CDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7622B51-67ED-468F-AAEE-ED9BC5734CDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7622B51-67ED-468F-AAEE-ED9BC5734CDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7622B51-67ED-468F-AAEE-ED9BC5734CDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2493B26-EAEB-4851-AEA0-0E094EC5A70A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2493B26-EAEB-4851-AEA0-0E094EC5A70A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2493B26-EAEB-4851-AEA0-0E094EC5A70A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2493B26-EAEB-4851-AEA0-0E094EC5A70A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FFDBCEC9-6F88-4274-B7EC-3EF9FA5AA192}
+	EndGlobalSection
+EndGlobal
