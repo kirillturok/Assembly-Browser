@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 
@@ -44,6 +45,7 @@ namespace Assembly_Browser.ViewModel
 
         public void OnExecute()
         {
+            
             var fileDialog = new OpenFileDialog
             {
                 Filter = "Assemblies|*.dll;*.exe",
@@ -55,12 +57,14 @@ namespace Assembly_Browser.ViewModel
 
             if(isOpen == null)
             {
+                //MessageBox.Show("ohhhh");
                 FileName = "File hasn't been chosen.";
                 return;
             }
 
             if (isOpen.Value)
             {
+                //MessageBox.Show("opened");
                 FileName = fileDialog.FileName;
                 CreateTree(FileName);
             }

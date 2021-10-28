@@ -9,7 +9,7 @@
         Title="Assembly Browser" Height="450" Width="800">
     <Window.Resources>
         <viewModel:ButtonViewModel x:Key="vm" ></viewModel:ButtonViewModel>
-        
+
     </Window.Resources>
     <Grid x:Name="MainRoot" Background="White" DataContext="{StaticResource vm}">
         <Label Content="Выбранный файл:" HorizontalAlignment="Left" Margin="20,19,0,0" VerticalAlignment="Top"/>
@@ -20,6 +20,7 @@
                 " HorizontalAlignment="Left" Margin="673,22,0,0" VerticalAlignment="Top" Width="78" 
                 Command="{Binding Source={StaticResource vm},Path=ButtonCommand}"
                 />
+        <TreeView HorizontalAlignment="Left" Height="317" VerticalAlignment="Top" Width="746" Margin="20,83,0,0"/>
 
     </Grid>
 </Window>
