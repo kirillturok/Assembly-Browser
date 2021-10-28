@@ -4,13 +4,19 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Assembly_Browser"
+        xmlns:viewModel="clr-namespace:Assembly_Browser.ViewModel"
         mc:Ignorable="d"
         Title="Assembly Browser" Height="450" Width="800">
+    <Window.Resources>
+        <viewModel:ButtonViewModel x:Key="vm"></viewModel:ButtonViewModel>
+    </Window.Resources>
     <Grid x:Name="MainRoot" Background="White">
         <Label Content="Выбранный файл:" HorizontalAlignment="Left" Margin="20,19,0,0" VerticalAlignment="Top"/>
         <Label Content="Файл не выбран" HorizontalAlignment="Left" Margin="134,19,0,0" VerticalAlignment="Top" x:Name="LabelFileName"/>
         <Button Content="Выбор файла
-                " HorizontalAlignment="Left" Margin="673,22,0,0" VerticalAlignment="Top" Width="78" Click="Button_Click"/>
+                " HorizontalAlignment="Left" Margin="673,22,0,0" VerticalAlignment="Top" Width="78" 
+                Command="{Binding Source={StaticResource vm},Path=ButtonCommand}"
+                />
 
     </Grid>
 </Window>

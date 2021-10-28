@@ -24,10 +24,5 @@ namespace Assembly_Browser
         {
             InitializeComponent();
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            LabelFileName.Content="gehegpjegwjgoplasjghiowHORIPHVAEP98VYU3Q98GHIWHP98YE";
-        }
     }
 }

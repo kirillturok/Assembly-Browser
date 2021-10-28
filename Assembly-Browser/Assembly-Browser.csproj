@@ -55,8 +55,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="NamespaseInfo.cs" />
-    <Compile Include="ViewModel.cs" />
+    <Compile Include="Command\ButtonCommand.cs" />
+    <Compile Include="ViewModel\ButtonViewModel.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
