@@ -23,14 +23,14 @@
                 " HorizontalAlignment="Left" Margin="673,22,0,0" VerticalAlignment="Top" Width="78" 
                 Command="{Binding Source={StaticResource vm},Path=ButtonCommand}"
                 />
-        <TreeView ItemsSource="{Binding Namespaces, UpdateSourceTrigger=PropertyChanged}"  
-                  HorizontalAlignment="Left" Height="317" VerticalAlignment="Top" Width="746" Margin="20,83,0,0" >
+
+        <TreeView Height="334" Margin="23,65,22.6,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5"
+            ItemsSource="{Binding Path=Namespaces}" >
             <TreeView.ItemTemplate>
-                <HierarchicalDataTemplate ItemsSource="{Binding Members, UpdateSourceTrigger=PropertyChanged}">
-                    <TextBlock Text="{Binding Signature, UpdateSourceTrigger=PropertyChanged}" />
+                <HierarchicalDataTemplate ItemsSource="{Binding Path=Members}">
+                    <TextBlock Text="{Binding Signature, UpdateSourceTrigger=PropertyChanged}"/>
                 </HierarchicalDataTemplate>
             </TreeView.ItemTemplate>
         </TreeView>
-
     </Grid>
 </Window>

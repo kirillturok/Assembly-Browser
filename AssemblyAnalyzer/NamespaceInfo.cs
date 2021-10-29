@@ -8,8 +8,8 @@ namespace AssemblyAnalyzer
 {
     public class NamespaceInfo
     {
-        public string Signature;
-        public List<Container> MemberInfo;
+        public string Signature { get; set; }
+        public List<Container> MemberInfo { get; set; }
 
         public NamespaceInfo(string signature)
         {

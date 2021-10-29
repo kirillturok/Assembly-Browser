@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainWindow", "Assembly-Browser\MainWindow.csproj", "{D7622B51-67ED-468F-AAEE-ED9BC5734CDE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assembly-Analyzer", "Assembly-Analyzer\Assembly-Analyzer.csproj", "{3303D366-3F74-4D16-9A90-1ADE81352438}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssemblyAnalyzer", "AssemblyAnalyzer\AssemblyAnalyzer.csproj", "{FF866B29-A3F2-43B4-9E26-6F90FD9116F8}"
 EndProject
 Global
@@ -19,10 +17,6 @@ Global
 		{D7622B51-67ED-468F-AAEE-ED9BC5734CDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7622B51-67ED-468F-AAEE-ED9BC5734CDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7622B51-67ED-468F-AAEE-ED9BC5734CDE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3303D366-3F74-4D16-9A90-1ADE81352438}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3303D366-3F74-4D16-9A90-1ADE81352438}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3303D366-3F74-4D16-9A90-1ADE81352438}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3303D366-3F74-4D16-9A90-1ADE81352438}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FF866B29-A3F2-43B4-9E26-6F90FD9116F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FF866B29-A3F2-43B4-9E26-6F90FD9116F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF866B29-A3F2-43B4-9E26-6F90FD9116F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
