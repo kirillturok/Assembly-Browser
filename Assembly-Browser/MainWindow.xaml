@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Assembly_Browser"
+        xmlns:local="clr-namespace:Assembly_Browser.ViewModel"
         xmlns:viewModel="clr-namespace:Assembly_Browser.ViewModel"
         mc:Ignorable="d"
         Title="Assembly Browser" Height="450" Width="800">
@@ -11,6 +11,9 @@
         <viewModel:ButtonViewModel x:Key="vm" ></viewModel:ButtonViewModel>
 
     </Window.Resources>
+    <Window.DataContext>
+        <local:ButtonViewModel/>
+    </Window.DataContext>
     <Grid x:Name="MainRoot" Background="White" DataContext="{StaticResource vm}">
         <Label Content="Выбранный файл:" HorizontalAlignment="Left" Margin="20,19,0,0" VerticalAlignment="Top"/>
         <Label HorizontalAlignment="Left" Margin="134,19,0,0" VerticalAlignment="Top" x:Name="LabelFileName"
@@ -20,7 +23,14 @@
                 " HorizontalAlignment="Left" Margin="673,22,0,0" VerticalAlignment="Top" Width="78" 
                 Command="{Binding Source={StaticResource vm},Path=ButtonCommand}"
                 />
-        <TreeView HorizontalAlignment="Left" Height="317" VerticalAlignment="Top" Width="746" Margin="20,83,0,0"/>
+        <TreeView ItemsSource="{Binding Namespaces, UpdateSourceTrigger=PropertyChanged}"  
+                  HorizontalAlignment="Left" Height="317" VerticalAlignment="Top" Width="746" Margin="20,83,0,0" >
+            <TreeView.ItemTemplate>
+                <HierarchicalDataTemplate ItemsSource="{Binding Members, UpdateSourceTrigger=PropertyChanged}">
+                    <TextBlock Text="{Binding Signature, UpdateSourceTrigger=PropertyChanged}" />
+                </HierarchicalDataTemplate>
+            </TreeView.ItemTemplate>
+        </TreeView>
 
     </Grid>
 </Window>

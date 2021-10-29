@@ -8,6 +8,8 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using Assembly_Browser;
+using AssemblyAnalyzer;
+using Container = AssemblyAnalyzer.Container;
 
 namespace Assembly_Browser.ViewModel
 {
@@ -72,22 +74,37 @@ namespace Assembly_Browser.ViewModel
             //MessageBox.Show("Button is cliicked");
         }
 
-        private List<int> _namespaces;
-        public List<int> Namespaces { get; set; }
-        //private readonly AssemblyBrowser;
+        private List<Container> _namespaces;
+        public List<Container> Namespaces { 
+            get
+            {
+                return _namespaces;
+            } 
+            set 
+            {
+                _namespaces = value;
+                OnPropertyChanged(nameof(Namespaces));
+            }
+        }
+        private readonly AssemblyBrowser assemblyBrowser = new AssemblyBrowser();
 
         private void CreateTree(string FileName)
         {
             Namespaces = null;
             try
             {
-                //Namespaces=
+                Namespaces = assemblyBrowser.GetAssemblyInfo(FileName);
+                OnPropertyChanged("Signature");
+                OnPropertyChanged("Members");
+                OnPropertyChanged(nameof(Namespaces));
+                MessageBox.Show("Managed");
             }catch(Exception e)
             {
-                FileName = e.Message;
+                MessageBox.Show(e.Message);
+                
             }
 
-            OnPropertyChanged("Namespaces");
+            //OnPropertyChanged("Signature");
         }
 
     }
