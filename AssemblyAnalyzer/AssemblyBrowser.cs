@@ -1,4 +1,4 @@
-﻿using Assembly_Analyzer.Formatters;
+﻿using AssemblyAnalyzer.Formatters;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,8 +7,9 @@ using System.Runtime.CompilerServices;
 using static System.Reflection.BindingFlags;
 using System.Text;
 using System.Threading.Tasks;
+using AssemblyAnalyzer;
 
-namespace Assembly_Analyzer
+namespace AssemblyAnalyzer
 {
     public class AssemblyBrowser
     {
@@ -56,7 +57,7 @@ namespace Assembly_Analyzer
                     assemblyInfo.Add(type.Namespace, new Container(type.Namespace, ClassFormatter.Format(type)));
 
                 Container @class = new Container(ClassFormatter.Format(type), ClassFormatter.Format(type));
-                @class.Members.Add(new MemberInfo(MethodFormatter.Format(method) + " — метод расширения", ClassFormatter.Format(classType)));
+                @class.Members.Add(new AssemblyAnalyzer.MemberInfo(MethodFormatter.Format(method) + " — метод расширения", ClassFormatter.Format(classType)));
 
                 assemblyInfo.TryGetValue(type.Namespace, out var container);
                 container.Members.Add(@class);
@@ -79,7 +80,7 @@ namespace Assembly_Analyzer
             return member;
         }
 
-        private static IEnumerable<MemberInfo> GetMethods(Type type)
+        private static IEnumerable<AssemblyAnalyzer.MemberInfo> GetMethods(Type type)
         {
             var methodInfos = new List<MemberInfo>();
 

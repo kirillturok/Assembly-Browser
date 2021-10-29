@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
+using Assembly_Browser;
 
 namespace Assembly_Browser.ViewModel
 {
@@ -73,6 +74,7 @@ namespace Assembly_Browser.ViewModel
 
         private List<int> _namespaces;
         public List<int> Namespaces { get; set; }
+        //private readonly AssemblyBrowser;
 
         private void CreateTree(string FileName)
         {

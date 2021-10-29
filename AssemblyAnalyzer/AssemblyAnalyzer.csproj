@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D7622B51-67ED-468F-AAEE-ED9BC5734CDE}</ProjectGuid>
+    <ProjectGuid>{FF866B29-A3F2-43B4-9E26-6F90FD9116F8}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Assembly_Browser</RootNamespace>
-    <AssemblyName>Assembly-Browser</AssemblyName>
+    <RootNamespace>AssemblyAnalyzer</RootNamespace>
+    <AssemblyName>AssemblyAnalyzer</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -55,8 +55,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Command\ButtonCommand.cs" />
-    <Compile Include="ViewModel\ButtonViewModel.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -65,12 +63,21 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="AssemblyBrowser.cs" />
+    <Compile Include="Container.cs" />
+    <Compile Include="Formatters\ClassFormatter.cs" />
+    <Compile Include="Formatters\ConstructorFormatter.cs" />
+    <Compile Include="Formatters\FieldFormatter.cs" />
+    <Compile Include="Formatters\MethodFormatter.cs" />
+    <Compile Include="Formatters\ProperiesFormatter.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MemberInfo.cs" />
+    <Compile Include="NamespaceInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -95,12 +102,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\AssemblyAnalyzer\AssemblyAnalyzer.csproj">
-      <Project>{ff866b29-a3f2-43b4-9e26-6f90fd9116f8}</Project>
-      <Name>AssemblyAnalyzer</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
