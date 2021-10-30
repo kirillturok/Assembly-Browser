@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainWindow", "Assembly-Brow
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssemblyAnalyzer", "AssemblyAnalyzer\AssemblyAnalyzer.csproj", "{FF866B29-A3F2-43B4-9E26-6F90FD9116F8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject1", "TestProject1\TestProject1.csproj", "{FEFA7969-A26B-4277-AFC3-10439B86E76E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{FF866B29-A3F2-43B4-9E26-6F90FD9116F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF866B29-A3F2-43B4-9E26-6F90FD9116F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF866B29-A3F2-43B4-9E26-6F90FD9116F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEFA7969-A26B-4277-AFC3-10439B86E76E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEFA7969-A26B-4277-AFC3-10439B86E76E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEFA7969-A26B-4277-AFC3-10439B86E76E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEFA7969-A26B-4277-AFC3-10439B86E76E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
