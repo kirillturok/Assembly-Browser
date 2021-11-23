@@ -2,12 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows;
-using Assembly_Browser;
 using AssemblyAnalyzer;
 using Container = AssemblyAnalyzer.Container;
 
@@ -29,7 +24,6 @@ namespace Assembly_Browser.ViewModel
             }
         }
 
-
         public ButtonCommand ButtonCommand { get; set; }
         public ButtonViewModel()
         {
@@ -48,7 +42,6 @@ namespace Assembly_Browser.ViewModel
 
         public void OnExecute()
         {
-            
             var fileDialog = new OpenFileDialog
             {
                 Filter = "Assemblies|*.dll;*.exe",
@@ -57,8 +50,7 @@ namespace Assembly_Browser.ViewModel
             };
 
             var isOpen = fileDialog.ShowDialog();
-
-            if(isOpen == null)
+            if (isOpen == null)
             {
                 //MessageBox.Show("ohhhh");
                 FileName = "File hasn't been chosen.";
@@ -75,12 +67,13 @@ namespace Assembly_Browser.ViewModel
         }
 
         private List<Container> _namespaces;
-        public List<Container> Namespaces { 
+        public List<Container> Namespaces
+        {
             get
             {
                 return _namespaces;
-            } 
-            set 
+            }
+            set
             {
                 _namespaces = value;
                 OnPropertyChanged(nameof(Namespaces));
@@ -97,15 +90,12 @@ namespace Assembly_Browser.ViewModel
                 OnPropertyChanged("Signature");
                 OnPropertyChanged("Members");
                 OnPropertyChanged(nameof(Namespaces));
-                MessageBox.Show("Managed");
-            }catch(Exception e)
+                //MessageBox.Show("Managed");
+            }
+            catch (Exception e)
             {
                 MessageBox.Show(e.Message);
-                
             }
-
-            //OnPropertyChanged("Signature");
         }
-
     }
 }
